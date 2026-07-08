@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake Assessment | Grey Ghosts Security Franklin</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 700px; margin: 0 auto; }
+        header { text-align: center; padding: 30px 0; }
+        h1 { color: var(--accent-color); margin-bottom: 5px; }
+        .subtitle { color: var(--text-muted); margin-top: 0; }
+        form { background-color: var(--card-bg); padding: 30px; border-radius: 8px; }
+        .form-step { margin-bottom: 25px; border-bottom: 1px solid #334155; padding-bottom: 20px; }
+        .form-step:last-child { border-bottom: none; }
+        h3 { color: var(--accent-color); margin-top: 0; }
+        label { display: block; margin: 12px 0 6px 0; font-weight: bold; }
+        .checkbox-label { font-weight: normal; display: flex; align-items: flex-start; margin: 10px 0; cursor: pointer; }
+        input[type="checkbox"], input[type="radio"] { margin-right: 12px; transform: scale(1.2); margin-top: 4px; }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #111827;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            color: #fff;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        textarea { resize: vertical; height: 100px; }
+        .btn-submit {
+            background-color: #4ade80;
+            color: #0f172a;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .btn-submit:hover { background-color: #22c55e; }
+        .warning-box {
+            background-color: #7f1d1d;
+            border: 1px solid #f87171;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>GREY GHOSTS SECURITY</h1>
+        <p class="subtitle">Thorough Security Assessment Application | Williamson County, TN</p>
+    </header>
+
+    <div class="warning-box">
+        <strong>⚠️ Mandatory Rules of Engagement Authorization:</strong> By submitting this application, you verify that you are the legal owner or authorized officer of the infrastructure being tested. Grey Ghosts operates strictly under explicit, written authorization.
+    </div>
+
+    <!-- We will plug in your unique Formspark link in a later step -->
+    <form action="https://submit-form.com" method="POST">
+        
+        <!-- STEP 1: BASIC BUSINESS DETAILS -->
+        <div class="form-step">
+            <h3>Step 1: Contact Information</h3>
+            <label for="company_name">Legal Business Name (Type 'Anonymous' if preferred)</label>
+            <input type="text" id="company_name" name="Company Name" required placeholder="e.g., Cool Springs Retail LLC">
+            
+            <label for="client_name">Authorized Officer Name</label>
+            <input type="text" id="client_name" name="Contact Person" required placeholder="Your full name">
+            
+            <label for="client_email">Secure Email Address</label>
+            <input type="email" id="client_email" name="Email" required placeholder="Where we should send official documents">
+        </div>
+
+        <!-- STEP 2: OPERATIONAL TARGETS -->
+        <div class="form-step">
+            <h3>Step 2: Operational Targets (What do we test?)</h3>
+            <p style="color:var(--text-muted); margin-top:0;">Check any boxes that match your primary security worries:</p>
+            
+            <label class="checkbox-label">
+                <input type="checkbox" name="Target: Physical Office" value="Yes">
+                <div>
+                    <strong>Physical Facilities / Headquarter Walkthrough</strong>
+                    <div style="color:var(--text-muted); font-size:0.9rem;">Select this if you want us to physically test door lock vulnerabilities or see if our operators can bypass the front desk unnoticed.</div>
+                </div>
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" name="Target: Wi-Fi" value="Yes">
+                <div>
+                    <strong>Office Wi-Fi & Local Network Inspection</strong>
+                    <div style="color:var(--text-muted); font-size:0.9rem;">Select this if you are worried about malicious actors parked nearby sniffing business passwords out of the air.</div>
+                </div>
+            </label>
+
+            <label class="checkbox-label">
+                <input type="checkbox" name="Target: Website" value="Yes">
+                <div>
+                    <strong>Public Website / Online Store Evaluation</strong>
+                    <div style="color:var(--text-muted); font-size:0.9rem;">Select this if your business runs an online checkout system or customer database that could be hijacked.</div>
+                </div>
+            </label>
+        </div>
+
+        <!-- STEP 3: LOGISTICAL INFORMATION -->
+        <div class="form-step">
+            <h3>Step 3: Business Environment Details</h3>
+            
+            <label for="business_type">Industry Sector</label>
+            <select id="business_type" name="Industry Type">
+                <option value="Retail / Local Shop">Retail / Local Shop</option>
+                <option value="Medical / Healthcare Clinic">Medical / Healthcare Clinic</option>
+                <option value="Legal / Corporate Office">Legal / Corporate Office</option>
+                <option value="Industrial / Warehouse">Industrial / Warehouse</option>
+                <option value="Other">Other Sector</option>
+            </select>
+
+            <label for="employee_count">Rough Number of Networked Devices / Computers</label>
+            <select id="employee_count" name="Device Count Scope">
+                <option value="1-10 devices">1 to 10 devices (Small Office)</option>
+                <option value="11-50 devices">11 to 50 devices (Medium Enterprise)</option>
+                <option value="51-200 devices">51 to 200 devices (Large Corporate Floor)</option>
+            </select>
+
+            <label for="symptoms_description">Describe what makes you want a security test right now:</label>
+            <textarea id="symptoms_description" name="Client Reasoning" placeholder="e.g., We recently moved to a new office block in Franklin, our employees noticed suspicious emails, or we just want standard corporate peace of mind."></textarea>
+        </div>
+
+        <!-- STEP 4: PREFERRED TEAM TIER -->
+        <div class="form-step">
+            <h3>Step 4: Requested Support Tier</h3>
+            <p style="color:var(--text-muted); margin-top:0;">Review policies on the homepage before choosing:</p>
+            <label><input type="radio" name="Requested Tier" value="Intermediate ($15/hr)" checked> Intermediate Team ($15/hour base)</label>
+            <label><input type="radio" name="Requested Tier" value="Expert ($25/hr)"> Expert Team ($25/hour base + premium equipment metrics)</label>
+        </div>
+
+        <!-- SUBMIT -->
+        <button type="submit" class="btn-submit">Submit Encrypted Intake Application</button>
+    </form>
+</div>
+
+</body>
+</html>
