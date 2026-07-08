@@ -20,74 +20,32 @@
             padding: 20px;
             line-height: 1.6;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        header {
-            text-align: center;
-            padding: 40px 0;
-            border-bottom: 1px solid var(--card-bg);
-        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; padding: 40px 0; border-bottom: 1px solid var(--card-bg); }
         h1 { color: var(--accent-color); margin-bottom: 5px; font-size: 2.2rem; letter-spacing: 1px; }
         .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-top: 0; }
-        .section {
-            background-color: var(--card-bg);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 25px 0;
-        }
+        .section { background-color: var(--card-bg); padding: 25px; border-radius: 8px; margin: 25px 0; }
         h2 { color: var(--accent-color); margin-top: 0; border-bottom: 1px solid #334155; padding-bottom: 10px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 600px) {
-            .grid { grid-template-columns: 1fr; }
-        }
-        .rate-card {
-            background: #111827;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 4px solid var(--accent-color);
-        }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+        .rate-card { background: #111827; padding: 15px; border-radius: 6px; border-left: 4px solid var(--accent-color); }
         .price { font-size: 1.8rem; font-weight: bold; color: #fff; margin: 10px 0; }
         .policy-list, .security-list { padding-left: 20px; }
         .policy-list li, .security-list li { margin-bottom: 12px; }
         .calculator label { display: block; margin: 12px 0; font-size: 1.05rem; cursor: pointer; }
-        .calc-result {
-            margin-top: 20px;
-            padding: 15px;
-            background: #111827;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
+        .calc-result { margin-top: 20px; padding: 15px; background: #111827; border-radius: 6px; text-align: center; font-size: 1.3rem; font-weight: bold; }
         #total-estimate { color: #4ade80; }
         input[type="checkbox"], input[type="radio"] { transform: scale(1.2); margin-right: 10px; }
-        .btn-nav {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #0f172a;
-            padding: 14px 28px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            margin-top: 15px;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
+        .btn-nav { display: inline-block; background-color: var(--accent-color); color: #0f172a; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; margin-top: 15px; text-align: center; width: 100%; box-sizing: border-box; }
         .btn-nav:hover { background-color: #0ea5e9; }
     </style>
 </head>
 <body>
-
 <div class="container">
     <header>
         <h1>GREY GHOSTS SECURITY</h1>
         <p class="subtitle">Authorized Penetration Testing & Physical Security Auditing | Franklin, TN</p>
     </header>
-
-    <!-- 1. OUR RATES SECTION -->
     <div class="section">
         <h2>Service Tier Rates</h2>
         <div class="grid">
@@ -105,8 +63,6 @@
             </div>
         </div>
     </div>
-
-    <!-- 2. OPERATIONAL POLICIES SECTION -->
     <div class="section">
         <h2>Rules of Engagement</h2>
         <ul class="policy-list">
@@ -115,35 +71,23 @@
             <li><strong>Williamson County Jurisdiction:</strong> All physical and network operations comply strictly with local boundaries and authorized boundaries.</li>
         </ul>
     </div>
-
-    <!-- 3. INSTANT ESTIMATE CALCULATOR -->
     <div class="section calculator">
         <h2>Instant Project Estimate</h2>
         <p style="color:var(--text-muted); margin-bottom: 15px;">Select your team tier and project parameters to check your estimated cost baseline immediately:</p>
-        
         <fieldset style="border:1px solid #334155; border-radius:6px; padding:15px; margin-bottom:15px;">
             <legend style="color:var(--accent-color); padding:0 5px; font-weight:bold;">1. Choose Team Tier</legend>
             <label><input type="radio" name="tier" value="15" checked onchange="calculateEstimate()"> Intermediate Team ($15/hr)</label>
             <label><input type="radio" name="tier" value="25" onchange="calculateEstimate()"> Expert Team ($25/hr)</label>
         </fieldset>
-
         <fieldset style="border:1px solid #334155; border-radius:6px; padding:15px;">
             <legend style="color:var(--accent-color); padding:0 5px; font-weight:bold;">2. Project Scope (Estimated Hours)</legend>
             <label><input type="checkbox" id="scope-building" value="10" onchange="calculateEstimate()"> Physical Office Building Walkthrough (~10 hrs)</label>
             <label><input type="checkbox" id="scope-wifi" value="8" onchange="calculateEstimate()"> Wireless Network & Wi-Fi Sniffing Audit (~8 hrs)</label>
             <label><input type="checkbox" id="scope-web" value="12" onchange="calculateEstimate()"> Public Website / Customer Login Breach Test (~12 hrs)</label>
         </fieldset>
-
-        <div class="calc-result">
-            Estimated Project Cost: <span id="total-estimate">$150</span>
-        </div>
-
-        <div style="text-align: center;">
-            <a href="apply.html" class="btn-nav">Ready to Apply? Go to the Intake Form</a>
-        </div>
+        <div class="calc-result">Estimated Project Cost: <span id="total-estimate">$150</span></div>
+        <div style="text-align: center;"><a href="apply.html" class="btn-nav">Ready to Apply? Go to the Intake Form</a></div>
     </div>
-
-    <!-- 4. TRANSPARENT SECURITY ARCHITECTURE EXPLANATION -->
     <div class="section">
         <h2>Security Through Transparency</h2>
         <p style="color:var(--text-muted)">We openly publish our business infrastructure setup. Even with this blueprint in hand, outside forces cannot access our records. Here is why our environment remains unhackable:</p>
@@ -154,32 +98,25 @@
             <li><strong>Isolated Form Routing (Formspark):</strong> Client intake applications bypass standard, unsecured email forms. Data maps through direct, encrypted point-to-point streams straight to the Admin.</li>
         </ul>
     </div>
-
-    <!-- 5. 100% AD-FREE REVIEWS -->
     <div class="section">
         <h2>Verified Client Feedback</h2>
         <p style="color:var(--text-muted); font-style:italic;">This review section runs directly on our private network. 100% ad-free, cookie-free, and tracker-free to protect your identity.</p>
         <div id="reviews-container" style="margin-top:15px;">
             <div style="background:#111827; padding:15px; border-radius:6px; margin-bottom:10px;">
                 <strong>🛡️ Verified Williamson County Local Business</strong> <span style="color:#eab308">★★★★★</span>
-                <p style="margin:5px 0 0 0; color:var(--text-muted)">"Grey Ghosts audited our corporate network in Cool Springs. Professional, swift execution, and their zero-early-disclosure policy kept our data completely safe."</p>
+                <p style="margin:5px 0 0 0; color:var(--text-muted)">"Grey Ghosts audited our network in Cool Springs. Professional execution, and their zero-early-disclosure policy kept our data completely safe."</p>
             </div>
         </div>
     </div>
 </div>
-
 <script>
     function calculateEstimate() {
         let baseRate = parseInt(document.querySelector('input[name="tier"]:checked').value);
         let totalHours = 0;
-        
         if(document.getElementById('scope-building').checked) totalHours += parseInt(document.getElementById('scope-building').value);
         if(document.getElementById('scope-wifi').checked) totalHours += parseInt(document.getElementById('scope-wifi').value);
         if(document.getElementById('scope-web').checked) totalHours += parseInt(document.getElementById('scope-web').value);
-        
-        // Default base of 10 hours for calculations if nothing is ticked
         if(totalHours === 0) totalHours = 10;
-        
         let finalEstimate = baseRate * totalHours;
         document.getElementById('total-estimate').innerText = "$" + finalEstimate;
     }
